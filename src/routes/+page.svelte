@@ -12,11 +12,10 @@
 	import Wallet from '../components/Wallet.svelte';
 </script>
 
-<div class="mx-6 md:md-0 w-full flex items-center justify-center">
-	<div class="w-[75%]">
-		Hello ma
+<div class="md:md-0 w-full flex items-center justify-center">
+	<div class="w-[75%] my-5">
 		{#if $account.isConnected}
-			<div class="pt-20 md:pt-0 mx-0">
+			<div class="pt-10 md:pt-0 mx-0">
 				<h2 class="h2 text-center grid-span-1 md:col-span-3 pt-2">
 					Sign a message from the current wallet.
 				</h2>

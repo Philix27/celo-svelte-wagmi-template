@@ -5,7 +5,7 @@
 	}[] = [
 		{
 			title: 'Wagmi',
-			link: ''
+			link: 'https://wagmi.sh/'
 		},
 		{
 			title: 'Wallet Connect',
@@ -18,17 +18,17 @@
 
 		{
 			title: 'Solidity',
-			link: ''
+			link: 'https://docs.soliditylang.org/'
 		},
 		{
 			title: 'Sveltekit',
-			link: ''
+			link: 'https://svelte.dev/docs/kit/introduction'
 		}
 	];
 </script>
 
 <div class="w-full flex justify-center">
-	<div class="w-[80%] grid grid-cols-4 my-5">
+	<div class="w-[80%] grid grid-cols-1 md:grid-cols-4 my-5">
 		{#each essentialDocs as item}
 			<a href={item.link} target="_blank" rel="noreferrer">
 				<div

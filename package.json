@@ -1,5 +1,5 @@
 {
-	"name": "skelekit-wagmiconnect",
+	"name": "celo-sveltekit-wagmi",
 	"version": "1.0.1",
 	"type": "module",
 	"author": {
@@ -50,5 +50,4 @@
 		"svelte-french-toast": "1.2.0",
 		"viem": "2.7.6"
 	}
-	
 }

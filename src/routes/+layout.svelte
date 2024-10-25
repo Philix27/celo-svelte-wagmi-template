@@ -3,8 +3,8 @@
 	import '../app.css';
 </script>
 
-<div>
-	<div class="flex items-center justify-between py-4 px-5 bg-primary">
+<div class="m-0 p-0 no-scrollbar ">
+	<div class="flex items-center justify-between py-4 px-5 bg-primary w-scree ">
 		<a href="/">
 			<div class="flex items-center">
 				<img src="/logo.svg" class="size-[50px] rounded-full mr-5" />

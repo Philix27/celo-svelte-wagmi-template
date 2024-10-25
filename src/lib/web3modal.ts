@@ -3,23 +3,7 @@ import { defaultWagmiConfig, createWeb3Modal } from '@web3modal/wagmi';
 import { getAccount, getChainId, reconnect, watchAccount, watchChainId } from '@wagmi/core';
 import { readable, writable } from 'svelte/store';
 
-import {
-	arbitrum,
-	aurora,
-	avalanche,
-	base,
-	bsc,
-	celo,
-	gnosis,
-	mainnet,
-	optimism,
-	polygon,
-	zkSync,
-	zora,
-	goerli,
-	ronin,
-	saigon
-} from 'viem/chains';
+import { celo, celoAlfajores } from 'viem/chains';
 import { CUSTOM_WALLET } from './constants';
 
 export const projectId = import.meta.env.VITE_PROJECT_ID;
@@ -32,29 +16,13 @@ if (typeof window !== 'undefined') {
 const customWallets = storedCustomWallet ? [JSON.parse(storedCustomWallet)] : undefined;
 
 const metadata = {
-	name: 'skelekit-wagmiconnect',
-	description: 'skelekit-wagmiconnect example',
-	url: 'https://skelekit-wagmiconnect.vercel.app/',
-	icons: ['https://avatars.githubusercontent.com/u/37784886']
+	name: 'celo-sveltekit-wagmi',
+	description: 'sveltekit-wagmiconnect example',
+	url: 'https://your-app-url/',
+	icons: ['https://link-to-an-icon']
 };
 
-export const chains = [
-	arbitrum,
-	aurora,
-	avalanche,
-	base,
-	bsc,
-	celo,
-	gnosis,
-	mainnet,
-	optimism,
-	polygon,
-	zkSync,
-	zora,
-	goerli,
-	ronin,
-	saigon
-] as const;
+export const chains = [celoAlfajores, celo] as const;
 
 export const wagmiConfig = defaultWagmiConfig({
 	chains,
@@ -72,8 +40,8 @@ createWeb3Modal({
 	themeMode: 'dark', // light/dark mode
 	themeVariables: {
 		//--w3m-font-family
-		'--w3m-accent': '#6B7280', // Button colour surface-500
-		'--w3m-color-mix': '#1e3a8a', // Modal colour mix primary-300
+		'--w3m-accent': '#272728', // Button colour surface-500
+		'--w3m-color-mix': '#0C0C14', // Modal colour mix primary-300
 		'--w3m-color-mix-strength': 50, // Strength of colour
 		'--w3m-font-size-master': '8px', // Font size
 		'--w3m-border-radius-master': '999px' // border rounding
