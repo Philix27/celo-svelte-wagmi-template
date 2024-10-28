@@ -4,7 +4,7 @@
 
 @layer base {
 	:root {
-		--background: #e6e6e6;
+		--background: #fcf6f2;
 		--foreground: #535353;
 
 		--muted: #898989;
@@ -68,4 +68,3 @@
 		--radius: 0.5rem;
 	}
 }
-

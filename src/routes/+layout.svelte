@@ -1,14 +1,13 @@
 <script lang="ts">
-	import '../lib/web3modal';
 	import '../app.css';
 </script>
 
-<div class="m-0 p-0 no-scrollbar ">
-	<div class="flex items-center justify-between py-4 px-5 bg-primary w-scree ">
+<div class="m-0 p-0 no-scrollbar">
+	<div class="flex items-center justify-between py-2 px-5 bg-primary w-scree">
 		<a href="/">
 			<div class="flex items-center">
 				<img src="/logo.svg" class="size-[50px] rounded-full mr-5" />
-				<strong class="text-[12px] md:text-xl md:uppercase">Celo dApp</strong>
+				<strong class="text-[12px] md:text-xl md:uppercase">Home</strong>
 			</div>
 		</a>
 		<div class="flex gap-x-5 items-center">
@@ -30,7 +29,7 @@
 				Remix
 			</a>
 
-			<w3m-button class="" />
+			<!-- <w3m-button class="" /> -->
 		</div>
 	</div>
 

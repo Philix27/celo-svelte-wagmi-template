@@ -1,6 +1,6 @@
 <!-- THIS FILE CAN BE REMOVED, IT SERVES ONLY TO DEMO BEST PRACTICES -->
 <script lang="ts">
-	import { chainId, account } from '$lib/web3modal';
+	import { chainId, account } from '$lib/client';
 </script>
 
 <div class="w-full">

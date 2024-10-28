@@ -2,7 +2,7 @@
 <script lang="ts">
 	import { signMessage } from '@wagmi/core';
 	import toast from 'svelte-french-toast';
-	import { wagmiConfig } from '$lib/web3modal';
+	import { wagmiConfig } from  '$lib/client';
 
 	let signature: string | undefined;
 	let label: string = 'Sign Message';
@@ -34,7 +34,7 @@
 
 <div class="card py-2">
 	<div class="space-y-4">
-		<h3 class="text-bold text-md">_eth_signMessage</h3>
+		<h3 class="text-bold text-md">Sign Message</h3>
 		<p class="text-left text-sm">
 			Result: <span class="text-sm"> {signature ?? ''} </span>
 		</p>

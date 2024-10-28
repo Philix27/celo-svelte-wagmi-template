@@ -1,7 +1,7 @@
 <!-- THIS FILE CAN BE REMOVED, IT SERVES ONLY TO DEMO BEST PRACTICES -->
 <script lang="ts">
 	import type { ExtendedProvider, Metadata } from '$lib/types';
-	import { account, provider, supported_chains } from '../lib/web3modal';
+	import { account, provider, supported_chains } from  '$lib/client';
 
 	let metadata: Metadata;
 	let chains: string[] = [];
