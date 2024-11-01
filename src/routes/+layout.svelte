@@ -1,5 +1,25 @@
 <script lang="ts">
 	import '../app.css';
+
+	import { celoAlfajores, celo, sepolia } from 'viem/chains';
+	import { ethereumClient, publicClient, web3Modal } from '../store';
+	// import { EthereumClient, w3mConnectors, w3mProvider } from '@web3modal/ethereum';
+	import { Web3Modal } from '@web3modal/html';
+	import { onMount } from 'svelte';
+
+	const projectId = '';
+	// const projectId = import.meta.env.VITE_WEB3MODAL_PROJECT_ID;
+
+	onMount(async () => {
+		// $ethereumClient = new EthereumClient(wagmiConfig, chainWritable);
+		$web3Modal = new Web3Modal({ projectId, defaultChain: celo }, $ethereumClient);
+
+		// initialize viem clients
+		// $publicClient = createPublicClient({
+		// 	chain: sepolia,
+		// 	transport: http()
+		// });
+	});
 </script>
 
 <div class="m-0 p-0 no-scrollbar">
@@ -28,7 +48,8 @@
 			>
 				Remix
 			</a>
-
+			<w3m-core-button balance="hide" icon="hide" />
+			<w3m-network-switch />
 			<!-- <w3m-button class="" /> -->
 		</div>
 	</div>

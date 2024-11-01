@@ -1,26 +1,20 @@
-import { defaultWagmiConfig, createWeb3Modal } from '@web3modal/wagmi';
+import { createWeb3Modal, defaultWagmiConfig } from '@web3modal/wagmi';
 
 import {
 	getAccount,
 	getChainId,
 	getBalance as _getBalance,
 	watchChainId,
-	createConfig,
-	injected,
 	watchAccount as _watchAccount,
 	reconnect,
 	disconnect as _disconnect,
-	switchChain as _switchChain,
-	type CreateConnectorFn
+	switchChain as _switchChain
 } from '@wagmi/core';
 import { readable, writable } from 'svelte/store';
-import { walletConnect } from '@wagmi/connectors';
-import { browser } from '$app/environment';
 import { fallback, http, type Transport } from 'viem';
 import { celo, celoAlfajores } from 'viem/chains';
 
-
-
+export const chainWritable = [celo, celoAlfajores] ;
 export const chains = [celo, celoAlfajores] as const;
 export const transports = chains.reduce(
 	(acc, { id }) => {
@@ -39,7 +33,6 @@ const metadata = {
 	icons: ['https://avatars.githubusercontent.com/u/37784886']
 };
 
-const ssr = !browser;
 export const projectId = import.meta.env.VITE_PROJECT_ID;
 
 export const wagmiConfig = defaultWagmiConfig({
@@ -52,20 +45,6 @@ export const wagmiConfig = defaultWagmiConfig({
 
 export type ConfiguredChain = (typeof chains)[number];
 export type ConfiguredChainId = ConfiguredChain['id'];
-
-// Initialize chain-specific transports based on configured RPC URLs
-
-const connectors: CreateConnectorFn[] = ssr
-	? []
-	: [walletConnect({ projectId, metadata, showQrModal: false }), injected()];
-// : [Web3AuthConnectorInstance([celoAlfajores, fhenixConfig, celo, sepolia]), injected()];
-
-const wgConfig = createConfig({
-	chains,
-	transports,
-	ssr: true,
-	connectors
-});
 
 reconnect(wagmiConfig);
 
