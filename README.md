@@ -69,9 +69,8 @@ Celo Composer is built on Celo to make it simple to build dApps using a variety 
 - [Celo](https://celo.org/)
 - [Solidity](https://docs.soliditylang.org/en/v0.8.19/)
 - [Hardhat](https://hardhat.org/)
-- [React.js](https://reactjs.org/)
-- [Next.js](https://nextjs.org/)
-- [viem](https://viem.sh/)
+- [Sveltekit](https://svelte.dev/)
+- [Wagmi](https://wagmi.sh/)
 - [Tailwind](https://tailwindcss.com/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
