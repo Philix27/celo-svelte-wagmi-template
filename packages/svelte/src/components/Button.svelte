@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { cva, type VariantProps } from 'class-variance-authority';
+	import { cva, type VariantProps } from 'class-variance-authority/dist';
 
 	export let onclick: VoidFunction;
 	// $: onclick();

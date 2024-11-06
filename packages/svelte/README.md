@@ -1,0 +1,2 @@
+# Sveltekit + Wagmi templaate
+

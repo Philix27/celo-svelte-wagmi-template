@@ -1,7 +1,7 @@
 <!-- THIS FILE CAN BE REMOVED, IT SERVES ONLY TO DEMO BEST PRACTICES -->
 <script lang="ts">
-	import { signMessage } from '@wagmi/core';
-	import toast from 'svelte-french-toast';
+	import { signMessage } from '@wagmi/core/dist/types/exports';
+	import toast from 'svelte-french-toast/dist';
 	import { wagmiConfig } from  '$lib/client';
 
 	let signature: string | undefined;

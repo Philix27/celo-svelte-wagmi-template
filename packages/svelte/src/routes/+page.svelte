@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Toaster } from 'svelte-french-toast';
+	import { Toaster } from 'svelte-french-toast/dist';
 	import Network from '../components/Network.svelte';
 	import SignMessage from '../components/SignMessage.svelte';
 	import Wallet from '../components/Wallet.svelte';
@@ -14,17 +14,17 @@
 <div class="md:md-0 w-full flex items-center justify-center">
 	<div class="w-[75%] my-5 flex items-center justify-center flex-col">
 		<div class="h1">There you go... a canvas for your next Celo project!</div>
-
+		{$account.isConnected ? 'Hey' : 'No'}
 		{#if $account.isConnected}
-			<Button onclick={disconnect} variant="destructive">Disconnect</Button>
-
 			<div class="pt-10 md:pt-0 mx-0 flex flex-col items-center justify-center">
-				Your address: {$account.address}
-
+				<Button onclick={disconnect} variant="destructive">Disconnect</Button>
+				<p>Your address:</p>
+				<p>{$account.address}</p>
 				Extra wallet metadata available when present
 				<Network />
-				<Wallet />
-				<SignMessage />
+				 <Wallet />
+				<!-- <Wallet />
+				<SignMessage /> -->
 			</div>
 		{:else}
 			<div>
